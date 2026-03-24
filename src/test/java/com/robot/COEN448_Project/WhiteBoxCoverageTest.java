@@ -66,6 +66,12 @@ public class WhiteBoxCoverageTest {
         // Action: Execute history command
         App.executeCommand("h", true);
     }
+    @Test
+    public void testShouldAddToHistory_FirstAndSecondConditionFalse() {
+        // Condition: False && False (is "q") && (Short-circuits)
+        // Action: Execute quit command with flag set to false
+        App.executeCommand("q", false); 
+    }
 
     // ==========================================
     // DECISION (BRANCH) COVERAGE
